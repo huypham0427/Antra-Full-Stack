@@ -1,0 +1,74 @@
+Concept Questions:
+
+1. What type would you choose for the following “numbers”?
+A person’s telephone number: string
+A person’s height: decimal or float
+A person’s age: int
+A person’s gender (Male, Female, Prefer Not To Answer): enum or string(use string-when use constants to define the gender option)
+A person’s salary: decimal or float
+A book’s ISBN: string
+A book’s price: decimal or float    
+A book’s shipping weight: decimal or float
+A country’s population: long or int64
+The number of stars in the universe: double
+The number of employees in each of the small or medium businesses in the
+United Kingdom (up to about 50,000 employees per business): int
+
+2. What are the difference between value type and reference type variables?
+Value type: 
+    - Directly contain their values. 
+    - When we create a variable, the actual value is stored in the variable.
+    - Pass by value => pass a value type to a method or assign it to another variable-a copy of the value is made 
+
+Reference type: 
+    - Hold a reference to an object in memory 
+    - Include: classes, arrays, and delegates
+    - When we create a variable, only reference to the object is stored
+    - Pass by reference => the reference is copied not the object 
+
+3. What happens when you divide an int variable by 0?   
+    - It will throw DivideByZeroException => undefined and cannot be evaluated.
+4. What happens when you divide a double variable by 0?
+    - It will not throw an exception, but instead will result in a special value called "Infinity" or -"Infinity"
+    - Divide py positive number by 0 => "Infinity"
+5. What happens when you overflow an int variable, that is, set it to a value beyond its
+range?
+    - It will wrap around to the other end of its range.
+    - known as an arithmetic overflow
+6. What is the difference between x = y++; and x = ++y;?
+    - the order of the increment operation.
+    - x = y++; first assigns the value of y to x, and then increments the value of y by 1. 
+        y = 5, x = 5, and then y = 6.
+    - x = ++y; first increments the value of y by 1, and then assigns the new value to x. 
+    So, if y was initially 5, y would become 6, and then x would be assigned 6.
+
+int x = 10;
+int y = 20;
+
+// x will be assigned the initial value of y (20) and then y will be incremented by 1
+int x1 = y++;
+
+// x will be assigned the incremented value of y (21)
+int x2 = ++y;
+
+Console.WriteLine($"x1: {x1}, y: {y}"); // Output: x1: 20, y: 21
+Console.WriteLine($"x2: {x2}, y: {y}"); // Output: x2: 21, y: 21
+
+
+
+7. What is the difference between break, continue, and return when used inside a loop
+statement?
+    - break is used to immediately exit the loop and continue with the next statement after the loop.
+    - continue is used to skip the current iteration of the loop and continue with the next iteration.
+    - return is used to exit the loop and return a value from the method in which the loop is defined.
+
+8. What are the three parts of a for statement and which of them are required?
+    - Initialization: This is where you initialize the loop variable(s) and set their initial values. 
+    - Condition: specify the condition that must be true for the loop to continue iterating. If the condition is false, the loop will exit. This part is required.
+    - Iteration: specify how the loop variable(s) should change on each iteration of the loop. 
+
+LeetCode Questions Numbers to do: 1, 9, 217, 412
+
+To start the #C in VSCode
+    - create new project: dotnet new console
+    - run: dotnet run
