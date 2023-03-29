@@ -1,0 +1,89 @@
+1. What are the six combinations of access modifier keywords and what do they do? 
+public: Allows access to the member from any code in the application.
+private: Restricts access to the member within the containing type.
+protected: Allows access to the member within the containing type and any derived types.
+internal: Allows access to the member within the same assembly.
+protected internal: Allows access to the member within the same assembly or any derived types.
+private protected: Allows access to the member within the containing type or any derived types in the same assembly.
+
+2.What is the difference between the static, const, and readonly keywords when applied to a type member?
+Static: Specifies that the member belongs to the type itself rather than to a specific instance of the type.
+Const: Specifies that the member is a constant and its value is set at compile time. It can only be of a primitive type or a string.
+Readonly: Specifies that the member can only be assigned a value during initialization or in the constructor, and once assigned, its value cannot be changed.
+
+3. What does a constructor do?
+special method in a class that is invoked automatically when an object of the class is created. Its purpose is to initialize the object's state 
+and ensure that the object is in a valid state when it is created.
+
+4. Why is the partial keyword useful?
+llows a class, struct, or interface to be defined in multiple files. It is useful in large projects where a single file may become too large and difficult to manage. 
+By splitting the definition across multiple files => navigate and understand the code
+
+5. What is a tuple?
+a data structure that allows you to store a sequence of elements of different types. It was introduced in C# 7.0 
+provides a convenient way to return multiple values from a method or to group together related data
+
+6. What does the C# record keyword do?
+introduced in C# 9.0 that simplifies the creation of classes that are primarily used for holding data
+provides a concise syntax for defining classes with properties, constructors, and methods that are automatically generated based on the properties.
+
+7. What does overloading and overriding mean?
+Overloading refers to the ability to define multiple methods with the same name but different parameters in a class
+Overriding refers to the ability to provide a new implementation of a method in a derived class that overrides the implementation in the base class
+
+8. What is the difference between a field and a property?
+a variable that is declared within a class and stores data that is associated with an instance of the class. 
+=> provides a way to access or modify the value of a private field by using a public getter or setter method. 
+This allows you to control access to the field and enforce business rules or data validation.
+
+9. How do you make a method parameter optional?
+static public void my_add(string str1, string str2,
+                         string str3 = "Antra")
+    {
+        Console.WriteLine(str1 + str2 + str3);
+    }
+  
+    // Main method
+    static public void Main()
+    {
+        my_add("Welcome", "to");
+    }
+}
+=> WelcometoAntra
+
+10. What is an interface and how is it different from abstract class?
+interface: 
+    defines a set of requirements that a class must follow if it implements the interface
+abstract:
+    cannot be instantiated and is used as a base class for other classes to derive from. It can contain abstract methods
+    which are methods that have no implementation and must be implemented by derived classes
+=>  main difference between the two is that a class can implement multiple interfaces but can only inherit from a single abstract class
+
+11. What accessibility level are members of an interface?
+public by default and must be implemented by any class that implements the interface.
+
+12. True/False. Polymorphism allows derived classes to provide different implementations
+of the same method. => True
+13. True/False. The override keyword is used to indicate that a method in a derived class is
+providing its own implementation of a method. => True
+14. True/False. The new keyword is used to indicate that a method in a derived class is
+providing its own implementation of a method. => True
+15. True/False. Abstract methods can be used in a normal (non-abstract) class. 
+=> False. Abstract methods can only be used in abstract classes or interfaces.
+16. True/False. Normal (non-abstract) methods can be used in an abstract class. => True
+17. True/False. Derived classes can override methods that were virtual in the base class. => True
+18. True/False. Derived classes can override methods that were abstract in the base class. => True
+19. True/False. In a derived class, you can override a method that was neither virtual non abstract in the
+base class. => False. A method in a derived class can only override a virtual or abstract method in the base class
+20. True/False. A class that implements an interface does not have to provide an
+implementation for all of the members of the interface. => False. A class that implements an interface must provide an implementation for all members of the interface.
+21. True/False. A class that implements an interface is allowed to have other members that
+aren’t defined in the interface.
+=> False. A class that implements an interface can only have members that are defined in the interface.
+22. True/False. A class can have more than one base class.=> True 
+23. True/False. A class can implement more than one interface.What is meant by the terms managed resource and unmanaged resource in .NET
+=> True 
+24. What's the purpose of Garbage Collector in .NET?
+automatically manage the memory used by managed resources
+checks for objects that are no longer being used and frees up the memory they were occupying.  
+=> prevent memory leaks and makes it easier for developers to write code without having to worry about manual memory management
