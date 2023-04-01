@@ -1,0 +1,2 @@
+Skip method is used to skip the specified number of elements in a sequence, 
+Take method is used to take the specified number of elements from a sequence
